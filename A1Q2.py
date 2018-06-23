@@ -31,15 +31,15 @@ def gcd(number1, number2):
                 return -number2
 				
 data_set = [10, 16, 8, 3, 4, 2, 1, 60, 33, 12, 18, 13]
-
-# Sets processing boundaries to speed up large calculations by setting a limit on
-# the number of elements to look at.
-# Input: a data set
-# Output: (int) a number of elements to process
-def process_data(aDataSet):
-	length = len(aDataSet)
-	if (length > 1000000):
-		return 100000
-	if length > 100000):
-		return length / 2
 		
+def main(in_data):
+	data_set = in_data
+	data_length = len(data_set)
+	
+	if (length <= 20):
+		for i in range(data_length):
+			for j in range(data_length):
+				if (j != i):
+					gcd(data_set[i], data_set[j])
+	
+	

@@ -1,0 +1,204 @@
+body {
+    background-color: #bbeeee;
+}
+
+#logo {
+    heigth: auto;
+    width: 120px;
+    cursor: pointer;
+}
+
+#mainTable {
+    background-color: lightgreen;
+    width: 100%;
+}
+
+#mainBody {
+    vertical-align: top;
+    padding-left: 1%;
+    padding-top: 12px;
+    padding-right: 12px;
+    width: 100%;
+}
+
+#bookList, #BRList{
+    width: 100%;
+    border-collapse: collapse;
+    padding-top: 12px;
+    padding-left: 12px;
+}
+
+#header {
+    color: #0064F7;
+    font-family: 'cooper', 'arial';
+}
+
+/* This code is a modification from the w3 schools tutorial on nav buttons:
+https://www.w3schools.com/w3css/w3css_buttons.asp */
+#navGroup button {
+    background-color: #0040F7;
+    border: 1px solid green;
+    color: white; 
+    padding: 5px 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 16%;
+    min-width: 120px;
+    margin-bottom: 3px;
+}
+
+#navGroup {
+    background-color: #0040F7;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+#navGroup:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+#navGroup button:hover, #commentGroup button:hover, #registerGroup button:hover {
+    background-color: red;
+}
+
+#subTitle {
+    color: white;
+    background-color: #0064F7;
+    font-family: 'cooper black', 'cooper';
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 24px 24px 24px 24px;
+}
+
+#sideBar {
+    vertical-align: top;
+    align: center;
+}
+
+#commentList, #commentBox{
+    width: 95%;
+    font-family: 'times new roman';
+    font-size: 14;
+}
+
+#commentList, #purchasePage, #homeMain, #aboutMain{
+    background-color: #bbffbb;
+}
+
+#purchasePage {
+    width: 100%;
+}
+
+#BRSearch, #bookSearch {
+     width: 98%;
+     font-size: 16px;
+     padding: 5px 1% 5px 1%;
+     border-style: none;
+}
+
+#registerAddress{
+    width: 95%;
+}
+
+#registerMain {
+    align: center;
+}
+
+/* This code is a modification from the w3 schools tutorial on nav buttons:
+https://www.w3schools.com/w3css/w3css_buttons.asp */
+#commentGroup button, #registerGroup button{    
+    background-color: #0040F7;
+    border: 1px solid green;
+    color: white;   /*font*/
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    width: 47.5%;
+}
+
+#footerText {
+    font-size: 14px;
+    text-align: center;
+}
+
+.subCommentHeader {
+    font-weight: bold;
+}
+
+.links {
+    color: blue;
+    text-decoration: underline;
+}
+
+.links:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lineOdd {
+    background-color: lightblue;
+}
+
+.lineEven {
+    background-color: lightgray;
+}
+
+.lineOdd:hover {
+    background-color: lightyellow;
+    cursor: pointer;
+}
+
+.lineEven:hover {
+    background-color: lightyellow;
+    cursor: pointer;
+}
+
+.listImages {
+    min-width: 80px;
+    height: auto;
+    width: auto%;
+    padding: 5px 5px 5px 5px;
+}
+
+.imgHeader {
+    width: 10%;
+}
+
+.titleHeader {
+    width: 90%;
+}
+
+.listTitle {
+    text-align: center;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 24px;
+    
+}
+
+.author {
+    font-variant: none;
+    font-weight: none;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.listHeader {
+    text-align: center;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 24px;
+    background-color: #0040F7;
+    color: white;
+}

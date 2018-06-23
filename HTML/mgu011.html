@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Totally Legitimate Business Website</title>
+    <link rel="stylesheet" href="mgu011.css">
+</head>
+<body>
+    <div id="displayTitle">
+        <table width='100%'>
+        <tr>
+            <td width = "15%" align="left">
+                <img id="logo" src="http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/logo" onClick="window.location.reload()"/>
+            </td>
+            <td width = "70%" align="center">
+                <h1 id="header">La Boutique Cass&eacutee</h1>
+            </td>
+            <td width = "15%" />
+        </table>
+    </div>
+    <table width="100%">
+        <tr>
+            <td width="1%"></td>
+            <td width="98%"><p id='subTitle'>SUBTITLE</p></td>
+            <td width="1%"></td>
+        </tr>
+    </table>
+    <!-- Where SideBar and Body Text are loaded -->
+    <table id="mainTable">
+        <tr>
+            <td id="sideBar">
+                <div id="navGroup">
+                    <button onclick="showField('homeMain')">Home</button>
+                    <button onclick="showField('aboutMain')">About</button>
+                    <button onclick="showField('blurayMain')">BluRays</button>
+                    <button onclick="showField('bookMain')">Books</button>
+                    <button onclick="showField('commentMain')">Comments</button>
+                    <button onclick="showField('registerMain')">Register</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="mainBody">
+                <div id="homeMain">
+                    Welcome to La Boutique Cass&eacutee. Your premium online retailer for <span class='links'; onclick="showField('bookMain')">Books</span> and <span class='links'; onclick="showField('blurayMain')">Videos</span>. Click on the links at the top of the page to get started and make sure to drop by and say hello in on our <span class='links'; onclick="showField('commentMain')">comments</span> section.
+                    <p>Thank you for your patronage and enjoy your visit.</p>
+                </div>
+                
+                <div id="aboutMain">
+                    <!--Request information from the client about the business-->
+                    La Boutique Cass&eacutee is an online shop selling books and blurays. The shop uses a service-oriented architecture with a customer-facing UI front-end, and a service back-end. The service back-end consists of two separate services and associated RESTful interfaces.
+                    <p>One of the services is open to all, and allows the user to browse and search through the shop. It also allows a user to place and view comments on the shop, as well as to register at the shop. The other service is only for registered users and this allows purchasing of items. Registered users are required to authenticate before using this service.</p>
+                </div>
+                
+                <div id="blurayMain">
+                    <input type="text" id="BRSearch" placeholder= "&#x1F50D Search for Blu-Rays..." onkeyup="search('BRSearch')"><br>
+                    <table id="BRList"></table>
+                </div>
+                
+                <div id="bookMain";>
+                    <input type="text" id="bookSearch" placeholder= "&#x1F50D Search for Books..." onkeyup="search('book')"><br>
+                    <table id="bookList"></table>
+                </div>
+                
+                <div id="commentMain">
+                    <span class="subCommentHeader">Name:</span><br>
+                    <input type="text" id="commentName" placeholder="Displayed Name"><br>
+                    <span class="subCommentHeader">Comments:</span><br>
+                    <textarea id="commentBox" rows="10" cols="50" placeholder="Comments..."></textarea><br>
+                    <div id="commentGroup">
+                        <button id="commentSubmit" onclick="submit('comment')">Submit</button>
+                        <button id="registerClear" onclick="clearForm('comment')">Clear</button><br><br>
+                    </div>
+                    <span class="subCommentHeader">Recent Comments:</span><br>
+                    <iframe id="commentList" src="http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/htmlcomments" style="border:none;"></iframe>
+                </div>
+                
+                <div id="registerMain">
+                    <span class="subCommentHeader">Name:</span><br>
+                    <input type="text" id="registerName" placeholder="Name"><br>
+                    
+                    <span class="subCommentHeader">Password:</span><br>
+                    <input type="password" id="registerPassword" placeholder="Password"><br>
+                    <input type="password" id="confirmPassword" placeholder="Retype Password"><br>
+                    
+                    <span class="subCommentHeader">Address:</span><br>
+                    <textarea type="text" id="registerAddress" rows="10" cols="50" placeholder="Some Address"></textarea><br>
+                    <div id="registerGroup">
+                        <button id="registerSubmit" onclick="submit('registration')">Submit</button>
+                        <button id="registerClear" onclick="clearForm('registration')">Clear</button><br><br>
+                    </div>
+                </div>
+                
+                <div id="purchaseInformation">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+<script src="mgu011.js"></script>
+</body>
+<footer>
+    <div id='footerText'>
+        <p>Created and maintained by <a href="mailto: mgu011@aucklanduni.ac.nz">Sam Corp &#174 2017</a></p>
+    </div>
+</footer>
+</html>

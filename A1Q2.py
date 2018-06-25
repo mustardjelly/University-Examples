@@ -90,9 +90,6 @@ def main(in_data):
 # input_string = "10 20 50 51 52 53 54 12 15 16 "
 # data_set = input_string.split()
 # Big Random Set
-data_set = [random.randint(0,20000) for i in range(20000)]
-
-for i in range(len(data_set)):
-	data_set[i] = int(data_set[i])
+data_set = [int(random.randint(0,20000)) for i in range(20000)]
 	
 main(data_set)

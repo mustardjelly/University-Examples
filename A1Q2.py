@@ -10,45 +10,48 @@ import math
 import copy
 import random
 
-input_string = "10 20 50 51 52 53 54 12 15 16 "
-data_set = input_string.split()
-data_set = [random.randint(0,20000) for i in range(20000)]
-
-for i in range(len(data_set)):
-	data_set[i] = int(data_set[i])
-
+# Adds values to a counting dictionary
 def add_to_dict(a_dict, value):
 	try:
 		a_dict[value] += 1
 	except:
 		a_dict[value] = 1
 
+# When given a set calculates the minimum of that set
+# Returns an Integer or None
 def pairwise_min(data_set):
 	data_length = len(data_set)
 	current_min = {}
-	row_min = []
+	mins = []
 	pair_data = []
 	
+	# Calculate the pairings for for all unique combinations
 	for i in range(data_length):
 		for j in range(data_length - (i)):
 			j = j + i
 			if (i != j):
 				#print("{0}: {2}\n{1}: {3}\n".format(i, j, data_set[i], data_set[j]))
 				temp_min = data_set[i] + data_set[j]
-				row_min += [temp_min]
+				mins += [temp_min]
 				
-	for value in row_min:
+	# Counts of all pair values
+	for value in mins:
 		add_to_dict(current_min, value)
 		
+	# Create a list of values with a count > 1
 	for key, value in current_min.items():
 		if (value > 1):
 			# print("{0}: {1}".format(key, value))
 			pair_data += [key]
+			
 	try:
 		return min(pair_data)
 	except:
 		return None
 		
+# Takes a data set and samples a minimum. Uses this sample 
+# to create a filtering mean to reduce the size of our data
+# set		
 def sample_min(in_data):
 	data_copy = copy.deepcopy(in_data)
 	data_size = len(in_data)
@@ -60,11 +63,18 @@ def sample_min(in_data):
 	
 	return local_min
 		
+# Takes a data set and attempts to find the smallest pair wise
+# sum defined in A1Q2
 def input(in_data):
+	# Sanitize the data for processing
 	in_data = list(set(in_data))
 	local_min = sample_min(in_data)
 	
+	# Creates a smaller filtered list
 	filtered_list = [x for x in in_data if x <= local_min]
+	# Creates a pairwise min for all elements in the original
+	# data set smaller than or equal to the smallest sum found 
+	# in the sample
 	pair_min = pairwise_min(filtered_list)
 	
 	if (not(pair_min)):
@@ -72,7 +82,17 @@ def input(in_data):
 	else:
 		print("Yes: {0}".format(pair_min))
 		
+
 def main(in_data):
 	input(in_data)
+
+# Inputs
+# input_string = "10 20 50 51 52 53 54 12 15 16 "
+# data_set = input_string.split()
+# Big Random Set
+data_set = [random.randint(0,20000) for i in range(20000)]
+
+for i in range(len(data_set)):
+	data_set[i] = int(data_set[i])
 	
 main(data_set)

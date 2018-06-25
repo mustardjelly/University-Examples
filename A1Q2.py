@@ -6,7 +6,6 @@
 #            mgu011                             #
 #            4364426                            #
 #################################################
-import math
 import copy
 import random
 
@@ -65,6 +64,7 @@ def sample_min(in_data):
 		
 # Takes a data set and attempts to find the smallest pair wise
 # sum defined in A1Q2
+# Output: Returns an integer pair_min if one exists
 def input(in_data):
 	# Sanitize the data for processing
 	in_data = list(set(in_data))
@@ -79,10 +79,11 @@ def input(in_data):
 	
 	if (not(pair_min)):
 		print("None")
+		return None
 	else:
 		print("Yes: {0}".format(pair_min))
+		return pair_min
 		
-
 def main(in_data):
 	input(in_data)
 
@@ -90,6 +91,6 @@ def main(in_data):
 # input_string = "10 20 50 51 52 53 54 12 15 16 "
 # data_set = input_string.split()
 # Big Random Set
-data_set = [int(random.randint(0,20000)) for i in range(20000)]
+data_set = [int(random.randint(0,20000)) for i in range(200000)]
 	
 main(data_set)

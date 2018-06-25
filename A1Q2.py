@@ -20,7 +20,7 @@ def add_to_dict(a_dict, value):
 # Returns an Integer or None
 def pairwise_min(data_set):
 	data_length = len(data_set)
-	current_min = {}
+	min_dict = {}
 	mins = []
 	pair_data = []
 	
@@ -35,13 +35,13 @@ def pairwise_min(data_set):
 				
 	# Counts of all pair values
 	for value in mins:
-		add_to_dict(current_min, value)
+		add_to_dict(min_dict, value)
 		
 	# Create a list of values with a count > 1
-	for key, value in current_min.items():
-		if (value > 1):
+	for value, count in min_dict.items():
+		if (count > 1):
 			# print("{0}: {1}".format(key, value))
-			pair_data += [key]
+			pair_data += [value]
 			
 	try:
 		return min(pair_data)

@@ -1,0 +1,371 @@
+/* 	Background Color:  #403075
+	Text Foreground: #887CAF
+	Tab Background: #261758
+*/
+
+body {
+	background-color: #403075;
+}
+.col-xl-6 {
+	background-color: #887CAF;
+}
+
+#right, #right2 {
+	border-left-style: solid;
+	border-left-color: 403075;
+	border-left-width: 2px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 850px;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+}
+
+#left, #left2 {
+	height: 850px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	color: white;
+}
+
+.nav-item a {
+	background-color: #261758;
+	color: white;
+}
+
+#nav-Profile {
+	position: relative;
+	left: 30.15%;
+}
+
+.nav {
+	position: relative;
+	left: 20.3%;
+	top: 0px;
+	z-index: 1;
+	width: 80%;
+}
+.nav-item a:hover {
+	background-color: #3F2F6F;
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
+	cursor: pointer;
+}
+.replySubmit:hover, .feedbackLabel:hover {
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
+	cursor: pointer;
+}
+.replySubmit:hover {
+	border-bottom-style: none;
+}
+.nav-item a:hover {
+	border-bottom-style: none;
+}
+
+.nav-tabs .nav-item.show  {
+	background-color: green;
+}
+
+.nav-tabs, .nav-item.show, .nav-link, .nav-tabs {
+	z-index: 0;
+}
+
+.nav-link.active {
+	border-bottom-style: none;
+	background-color: #887caf;
+	color: white;
+	font-weight: bold;
+}
+
+.feedbackContainer {
+	color: white;
+}
+
+#msg1Contents, #msg2Contents, #msg3Contents {
+	text-align: center;
+	background-color: #615192;
+	display: ;
+}
+
+.spacer {
+	height: 10px;
+}
+
+.feedbackRow {
+	color: white;
+}
+.feedbackInfo {
+	vertical-align: top;
+	width: 15%;
+}
+
+.feedbackLabel, .nav-link, .replySubmit {
+	background-color: #261758;
+	width: 100%;
+	text-align: left;
+	border: none;
+	padding-top: 5px;
+	padding-left: 10px;
+	border-radius: .5rem;
+	border-bottom-left-radius: 0em;
+	border-bottom-right-radius: 0em;
+}
+
+#fill0 {
+	width: 20.3%;
+}
+
+#fill1 {
+	width: 24%;
+}
+
+.feedbackContainer {
+	visibility: normal;
+}
+
+#right p {
+	margin-bottom: 0;
+}
+
+.feedbackMessage {
+	width: 80%;
+	padding-left: 5px;
+}
+.feedbackInfo {
+	width: 20%;
+}
+
+.feedbackInfo, .feedbackLabel {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	
+	color: white;	
+}
+
+.feedbackMessage {
+	color: white;
+}
+
+.nav-tabs {
+	border-bottom: none;
+}
+
+.feedbackTable {
+	display: none;
+}
+
+#myDIV {
+    width: 500px;
+    height: 500px;
+    background-color: lightblue;
+}
+
+.expandInstruction {
+	color: white;
+	position: absolute;
+	right: 30px;
+	padding-top: 5px;
+}
+
+.postTitle {
+	padding-left: 3px;
+}
+
+.col-xl-6 {
+	padding-top: 5px;
+}
+
+button {
+	padding-top: 5px;
+	border-radius: .25rem;
+	border-bottom-left-radius: 0em;
+	border-bottom-right-radius: 0em;
+}
+.replyControlRow {
+	position: relative;
+	top: 10px;
+}
+#reply1{
+	display: ;
+	background-color: #988CBF;
+}
+.postName {
+	padding-left: 10px;
+	color: grey;
+}
+.replyTable {
+	padding-top: 10px;
+}
+#msg3 {
+	display: none;
+}
+#msg1 {
+	padding-top: 8px;
+}
+.replyTable2 {
+	width: 100%;
+}
+.feedbackName {
+	position: relative;
+	font-weight: bold;
+}
+.feedbackPosted {
+	font-size: 12;
+	color: grey;
+}
+#msg1Contents, #msg2Contents {
+	position: relative;
+	left: px;
+	width: 100%;
+}
+.feedbackInfo {
+	background-color: #403075;
+}
+#msg1Contents tr, #msg2Contents tr, #msg3Contents tr {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: white;
+}
+.replyInput1, .replySubmit1 {
+	padding-left: 10px;
+	padding-bottom: 12px;
+	/* border: none; */	
+}
+.replySubmit1 {
+	padding-right: 10px;
+}
+
+.replyInput1 {
+	width: 100%;
+}
+.replyInput {
+	position: relative;
+	top: 6px;
+	width: 100%;
+	rows: 10;
+}
+.replySubmit {
+	position: relative;
+	bottom: -11px;
+	background-color: #261758;
+	color: white;
+	border: none;
+	height: 50px;
+	width: auto;
+}
+.logo {
+	position: fixed;
+	left: 330px;
+	top: 10px;
+	color: white;
+	height: 100px;
+	width: 100px;
+	size: 10em;
+}
+.logo a {
+	font-size: 3em;
+	color: white;
+}
+.dropContent {
+	display: none;
+	position: absolute;
+	z-index: 2;
+	min-width: 100px;
+	background-color: #261758;
+	border-left-style: solid;
+	border-left-color: white;
+	border-left-width: 1px;
+}
+.dropContent a {
+	color: white;
+	padding: 10px 10px;
+	font-size: 1em;
+}
+.dropContent a:hover {
+	font-weight: bold;
+	text-decoration: none;
+}
+.profileDrop:hover .dropContent {
+	display: block;
+}
+.profileDrop:hover {
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
+	border-bottom-style: none;
+	
+	border-radius: .5rem;
+	border-bottom-left-radius: 0em;
+	border-bottom-right-radius: 0em;
+}
+.profileDrop {
+	position: absolute;
+	top: -3px;
+	right: 390px;
+	z-index: 1;
+}
+
+profileBtn {
+	z-index: 1;
+}
+
+.profileBtn {
+	background-color: #261758;
+    color: white;
+	border: none;
+	padding: .5rem 1rem;
+	border-radius: .5rem;
+	border-bottom-left-radius: 0em;
+	border-bottom-right-radius: 0em;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+.col-xl-6, .body {
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+@keyframes pulse {
+    0%   {opacity: 1.0;}
+    50%  {opacity: 0.6;}
+	100% {opacty: 1.0;}
+}
+
+.feedbackLabel:hover, .replySubmit:hover {
+	animation-name: pulse;
+	animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+	0%		{opacity: 1;}
+	50%		{opacity: .2;}
+	100%	{opacity: 1;;}
+}
+
+#animation {
+	animation-name: blink;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}

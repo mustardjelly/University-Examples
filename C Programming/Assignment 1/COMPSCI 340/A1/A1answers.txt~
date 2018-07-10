@@ -1,0 +1,21 @@
+Question 1
+
+The problem is with how the function (system command?) free() works. Free tells the operating system that memory is usable, which essentially allows the OS to use or allocate to this memory.
+
+Because the memory has not been cleared/deleted it could cause unintended side effects when this memory is accessed. If the OS were to use that memory and it ran into a word it does not expect or expects to be cleared, it may cause programs to operate unexpectedly.
+
+This could be solved by ensuring all words in the stack we have created were blanked before calling free().
+
+Question 2
+
+If the codes run in threads3.c were not time consuming, either the period (alarm signal) would be shorter than a very quick line of code (e.g x++), in that case no line of code could run and the program may never produce any code, and may never finish running. 
+
+Otherwise if the period was too long all parts of the code may execute before an alarm signal is generated and the code would appear not to have preemption. 
+
+By adding time wasting parts to the code, the alarm signal has a chance to interrupt the running thread and force it to switch to a new thread.
+
+Question 3
+
+We use the block signal signals so the timer cannot occur during the time wasting function. If a time wasting function was not blocked then another process may run into the same portion of memory and produce random/unwanted result. In our case it's not so important (the random number bears no significance) but for critical blocks of code we only want a set number of threads running through them at any given time. This happens if no block is implemented, then the same area of memory is concurrently accessed by two threads.
+
+By providing the block we are controlling which threads have access to portions of our code.

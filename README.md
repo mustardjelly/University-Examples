@@ -3,6 +3,8 @@ Highlights of code I have written
 
 Assembly Example - Example code written in Assembly. Code was written throughout the year of 2017 for Operating System courses
 
+C Sharp Work - Recently self taught language. Created a simple prime number printing script
+
 Data Science Example - Python code written to explore data in a data science capacity. Code written in 1st half 2018 for Foundations of Computational Science
 
 MtG Tournament Organizer - Python created tournament organizer which replicates the tournament organizer used by wizards of the coast.

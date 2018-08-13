@@ -21,42 +21,38 @@ def main_screen():
 	print('The current time is: ', end='')
 	print('{0}'.format(time.strftime('%X')))
 	print('Current Task: {0}'.format(current_task))
-	#print('Next Task: {0}'.format(next_task))
-	#print('Tasks: {0}'.format(task_list))
+	
+def exit(task_list):
+	save(task_list)
+	return False
 	
 def add_task():
 	task_list = load()
-	task = str(input('Next Task (x to e(X)it):\n'))
-	# Exit code
-	if (task.lower() == 'x'):
+	task = str(input('Next Task (x to e(X)it):\n')).lower()
 	
-		save(task_list)
-		return False
+	# Exit code
+	if (task == 'x'):
+		return exit(task_list)
 	# Reset Tasky
-	elif (task.lower() == 'reset'):
+	elif (task == 'reset'):
 		new()
-		return True
 	# Correct current task
-	elif (task.lower() == 'correct'):
-		change = False
+	elif (task == 'correct'):
 		task_change = str(input("Enter the corrected task:\n"))
 		print('{0} will be replaced with {1}'.format(task_list.get_current_task(), task_change))
 		if (confirm()):
 			task_list.correct_task(task_change)
 			save(task_list)
-		return True
-	elif (task.lower() == 'next'):
+	elif (task == 'next'):
 		task_list.inc_count()
 		save(task_list)
-		return True
 	# Replace task and deliver new task
 	else:
 		task_list.add_task(task)
-		
 		save(task_list)
-		return True
+	return True
 
-def confirm():
+def confirm(task_list, task_change):
 	confirm = str(input('Are you sure (y/n)?\n')).lower()
 	while (confirm != 'y' and confirm != 'n'):
 		confirm = str(input('Invalid Answer\nAre you sure? (y/n)?')).lower()
@@ -68,34 +64,33 @@ def confirm():
 def save(task_list):
 	with open(SAVE_LOC, 'wb') as handle:
 		pickle.dump(task_list, handle, -1)
-	#print('Tasky Saved!')
 	
 def new():
-	can_continue = False
-	while (not(can_continue)):
+	while (True):
 		try:
 			int_input = int(input('Number of tasks in the new list? (default is 3): '))
 			if (int_input > 0):
-				can_continue = True
-		except:
-			print("Must be an integer >0!")
+				break
+			else:
+				print("Must be greater than 0!") 
+		except (TypeError):
+			print("Must be an integer")
 	task_list = TaskList(int_input)
 	task_list.populate_list()
 	save(task_list)
 	
-def new_or_load():
-	type_input = str(input('(N)ew List or (L)oad List?\n'))
+def init():
+	type_input = str(input('(N)ew List or (L)oad List?\n')).lower()
 	while (type_input[0] != 'n' and type_input[0] != 'l'):
 		type_input = str(input('(N)ew List or (L)oad List?')).lower()
 	if (type_input[0] == 'n'):
 		new()
 	else:
-		task_list = load()
-		save(task_list)
+		return load()
 
 def main():
 	print('Welcome to Tasky')
-	task_list = new_or_load()
+	task_list = init()
 	main_screen()
 	
 	while (add_task()):

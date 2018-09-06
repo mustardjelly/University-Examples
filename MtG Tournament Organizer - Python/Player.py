@@ -65,4 +65,4 @@ class Player:
                     if self.__resistance > other.__resistance:
                         return True
         except:
-            return        
+            return

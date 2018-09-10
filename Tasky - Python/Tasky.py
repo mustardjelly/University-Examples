@@ -39,28 +39,30 @@ def exit(task_list):
 	
 def add_task():
 	task_list = load()
-	task = str(input('Task to add? {0} will be over-written: '.format(task_list.get_current_task()))).lower()
+	task = str(input('Task to add? {0} will be over-written: '.format(task_list.get_current_task())))
+	comm = task.lower()
 	
 	# Exit code
-	if (task == 'x'):
+	if (comm == 'x'):
 		return exit(task_list)
-	if (task == '?'):
+	if (comm == '?'):
 		print_commands()
 		return True
 	# Reset Tasky
-	elif (task == 'reset'):
-		new()
+	elif (comm == 'reset'):
+		task_list = new()
 	# Correct current task
-	elif (task == 'correct'):
+	elif (comm == 'correct'):
 		task_change = str(input("Enter the corrected task:\n"))
 		print('{0} will be replaced with {1}'.format(task_list.get_current_task(), task_change))
 		if (confirm()):
 			task_list.correct_task(task_change)
-	elif (task == 'next'):
+	elif (comm == 'next'):
 		task_list.inc_count()
 	# Replace task and deliver new task
 	else:
 		task_list.add_task(task)
+	
 	save(task_list)
 	return True
 
@@ -84,19 +86,21 @@ def new():
 				break
 			else:
 				print("Must be greater than 0!") 
-		except (TypeError):
-			print("Must be an integer")
+		except (ValueError):
+			int_input = 3
+			break
 			
 	task_list = TaskList(int_input)
 	task_list.populate_list()
-	
 	return task_list
 	
 def init():
 	while True:
-		type_input = str(input('(N)ew List or (L)oad List?')).lower()
+		type_input = str(input('(N)ew List or (L)oad List?\n')).lower()
 		if (type_input == 'n'):
-			return new()
+			task_list = new()
+			save(task_list)
+			break
 		elif (type_input == 'l'):
 			return load()
 

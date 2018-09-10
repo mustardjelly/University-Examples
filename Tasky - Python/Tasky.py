@@ -6,6 +6,16 @@ import pickle
 SAVE_LOC = 'tasky_save.txt'
 
 #Tasky
+def print_commands():
+	comm_dict = {}
+	comm_dict['x'] = "Exit"
+	comm_dict['reset'] = "Reset tasky"
+	comm_dict['correct'] = "Edit the current task"
+	comm_dict['next'] = "Skip to the next task but do not change it"
+	
+	print("{0:^30}".format("COMMANDS"))
+	for key in comm_dict:
+		print("{0:>10} : {1}".format(key, comm_dict[key]))
 
 def load():
 	file_obj = open(SAVE_LOC, 'rb')
@@ -33,6 +43,8 @@ def add_task():
 	# Exit code
 	if (task == 'x'):
 		return exit(task_list)
+	if (task == '?'):
+		print_commands()
 	# Reset Tasky
 	elif (task == 'reset'):
 		new()
@@ -53,13 +65,12 @@ def add_task():
 	return True
 
 def confirm(task_list, task_change):
-	confirm = str(input('Are you sure (y/n)?\n')).lower()
-	while (confirm != 'y' and confirm != 'n'):
-		confirm = str(input('Invalid Answer\nAre you sure? (y/n)?')).lower()
-	if (confirm == 'y'):
-		return True
-	else:
-		return False
+	while True:
+		confirm = str(input('Are you sure (y/n)?\n')).lower()
+		if (confirm == 'y'):
+			return True
+		elif (confirm == 'n'):
+			return False
 		
 def save(task_list):
 	with open(SAVE_LOC, 'wb') as handle:

@@ -1,6 +1,8 @@
 # University-Examples
 Highlights of code I have written
 
+Tasky - Python programme created to queue tasks for productivity. Code written in July 2018. Best example of current abilties
+
 Assembly Example - Example code written in Assembly. Code was written throughout the year of 2017 for Operating System courses
 
 C Sharp Work - Self taught (07/2018). Created a simple prime number printing script
@@ -15,7 +17,5 @@ based on players win/loss ratio.
 OS Work - Example code written in C and Python. Written during 2017 for Operating System courses.
 
 Algorithm Work - Python code written for assignments in Algorithms course. Code written in the second half of 2017.
-
-Tasky - Python Simple programme created to queue tasks for productivity. Code written in July 2018.
 
 Web Examples - HTML/CSS/JavaScript examples. There is a website and a rough interface design. Code written for vairous web papers between 2017 and 2018.

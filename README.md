@@ -1,7 +1,7 @@
 # University-Examples
 Highlights of code I have written
 
-Tasky - Python programme created to queue tasks for productivity. Code written in July 2018. Best example of current abilties
+Tasky - Python programme created to queue tasks for productivity. Code written in July 2018. Best example of current abilities
 
 Assembly Example - Example code written in Assembly. Code was written throughout the year of 2017 for Operating System courses
 
